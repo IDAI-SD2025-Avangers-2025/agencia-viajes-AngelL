@@ -1,3 +1,4 @@
+//primer formulario
 var formulario = document.getElementById("individual");
 
 function calcular(){
@@ -71,8 +72,47 @@ function calcular(){
     total = total + 437 * 4;     }   
 
             
-    
-    formulario.total.value = total + diasdiv;    
+    formulario.total.value = total + diasdiv * 769;    
 
+}
+
+//Segundo formulario
+
+var formulario = document.getElementById("paquetes");
+
+function calcular2(){
+    var destino = formulario.destino.value;
+    var extras = formulario.extras.value;
+    var especial = formulario.especial.value
+
+    var diaspaq = document.getElementById("diaspaq").value;
+
+    //alert("si funciono")
+
+    var total2 = 0
+
+    if(destino == "suramerica") {
+    total2 += 7999;}
+
+    else if(destino == "europa") {
+    total2 += 21999; }
+
+    else if(destino == "africa") {
+    total2 += 17999; }
+
+    else if(destino == "asia") {
+    total2 += 25999; }
+    
+    else if(destino == "norteamerica") {
+    total2 += 12999; }    
+
+    else{
+    alert("Por favor selecciona un destino");
+    return; }  
+
+    
+
+
+    formulario.total2.value = total2 + diaspaq * 769;    
 
 }
