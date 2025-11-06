@@ -44,7 +44,10 @@
     </section>
 
     <!-- FORMULARIO PRINCIPAL -->
-    <div class="main-form">
+
+     <form action="" id="individual">
+
+            <div class="main-form">
         <!-- SECCIÓN 1: COTIZACIÓN INDIVIDUAL -->
         <section class="form-section">
             <h2 class="section-title">Cotización Individual</h2>
@@ -94,8 +97,20 @@
                 <input type="number" id="dias-individual" name="dias-individual" min="1" max="365">
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Individual</button>
+            <button type="button" class="submit-btn" onclick="calcular()">Cotización Individual</button>
+            <br>
+            <label for="total">
+                Total a Pagar:
+                <input type="number" name="total" id="total" readonly>
+
+            </label>
+
         </section>
+
+     </form>
+
+
+     <form action="" id="paquetes">
 
         <!-- SECCIÓN 2: PAQUETES -->
         <section class="form-section">
@@ -135,8 +150,16 @@
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Cotización Paquetes</button>
+            <button type="button" class="submit-btn" onclick="calcular()">Cotización Paquetes</button>
+            <br>
+            <label for="total">
+                Total a Pagar:
+                <input type="number" name="total" id="total" readonly>
+
+            </label>
+
         </section>
+
     </div>
 
     <!-- PIE DE PÁGINA -->
@@ -145,6 +168,8 @@
         <p>Matrícula: 12345678</p>
         <p>WEB PAGE</p>
     </footer>
+
+     </form>
 
 
     <script src="script.js"></script>
