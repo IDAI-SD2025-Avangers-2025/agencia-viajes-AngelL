@@ -70,8 +70,9 @@ function calcular(){
         if(menores == "4") {
     total = total + 437 * 4;     }   
 
+            
     
-    formulario.total.value = total;    
+    formulario.total.value = total + diasdiv;    
 
 
 }
