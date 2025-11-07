@@ -83,8 +83,6 @@ var formulario2 = document.getElementById("paquetes");
 function calcula(){
     var destino = formulario2.destino.value;
 
-    var especial = formulario2.especial.value
-
     var diaspaq = document.getElementById("diaspaq").value;
 
     //alert("si funciono")
@@ -112,8 +110,8 @@ function calcula(){
 
 
 
-    if(especial == "crucero") {tota += 19999}
-
+    if(formulario2.crucero.checked == true){
+    tota += 19999; }
 
 
     if(formulario2.bebidas.checked == true){
