@@ -27,7 +27,6 @@ function calcular(){
     return; }  
 
 
-
     if(hospedaje == "sin-hotel") {
     total += 499;}
 
@@ -76,43 +75,62 @@ function calcular(){
 
 }
 
+
 //Segundo formulario
 
-var formulario = document.getElementById("paquetes");
+var formulario2 = document.getElementById("paquetes");
 
-function calcular2(){
-    var destino = formulario.destino.value;
-    var extras = formulario.extras.value;
-    var especial = formulario.especial.value
+function calcula(){
+    var destino = formulario2.destino.value;
+
+    var especial = formulario2.especial.value
 
     var diaspaq = document.getElementById("diaspaq").value;
 
     //alert("si funciono")
 
-    var total2 = 0
+    var tota = 0
 
     if(destino == "suramerica") {
-    total2 += 7999;}
+    tota += 7999;}
 
     else if(destino == "europa") {
-    total2 += 21999; }
+    tota += 21999; }
 
     else if(destino == "africa") {
-    total2 += 17999; }
+    tota += 17999; }
 
     else if(destino == "asia") {
-    total2 += 25999; }
+    tota += 25999; }
     
     else if(destino == "norteamerica") {
-    total2 += 12999; }    
+    tota += 12999; }    
 
     else{
     alert("Por favor selecciona un destino");
     return; }  
 
-    
 
 
-    formulario.total2.value = total2 + diaspaq * 769;    
+    if(especial == "crucero") {tota += 19999}
+
+
+
+    if(formulario2.bebidas.checked == true){
+    tota += 699; }
+
+    if(formulario2.buceo.checked == true){
+    tota += 699; }
+
+    if(formulario2.expedicion.checked == true){
+    tota += 699; }    
+
+    if(formulario2.fotografias.checked == true){
+    tota += 699; }    
+
+    if(formulario2.pesca.checked == true){
+    tota += 699; }    
+
+    formulario2.tota.value = tota + diaspaq * 899;    
 
 }
